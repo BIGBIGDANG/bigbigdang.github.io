@@ -17,4 +17,28 @@ async function loadImage(spec) {
   }
 }
 
+async function prepareCV() {
+  const files = Array.from({ length: 13 }, (_, i) => `assets/cvp-${String(i).padStart(2, '0')}.b64`);
+  try {
+    const parts = [];
+    for (const file of files) {
+      const res = await fetch(file);
+      if (!res.ok) throw new Error(`Unable to load ${file}`);
+      parts.push((await res.text()).trim());
+    }
+    const b64 = parts.join('');
+    const binary = atob(b64);
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+    const url = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
+    const link = document.getElementById('cv-link');
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noreferrer';
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 assetSpecs.forEach(loadImage);
+prepareCV();
