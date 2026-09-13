@@ -33,18 +33,40 @@
 
     <section id="research" class="wrap section">
       <p class="kicker">Selected work</p><h2>Research</h2>
-      <article class="project">
-        <div class="image-shell"><img id="togo-img" class="project-image" alt="ToGo method overview"></div>
-        <div><p class="tag">Embodied AI · Robot Manipulation</p><h3>ToGo: Planning Dexterous Tool Use via Tool-Centric Functional Goal-Trajectory Generation</h3><p>We formulate dexterous tool use as tool-centric functional goal-trajectory generation, representing manipulation through functional tool geometry and tool-environment interaction constraints.</p><p>A VLM-grounded geometric planner identifies functional tool parts and interaction targets from language, tool geometry, and RGB-D observations, then compiles them into staged SE(3) tool-pose goals.</p><p class="meta">AAAI 2027 · Under Review</p></div>
+
+      <article class="project featured-project">
+        <div class="project-copy featured-copy">
+          <p class="tag">Embodied AI · Robot Manipulation</p>
+          <h3>ToGo: Planning Dexterous Tool Use via Tool-Centric Functional Goal-Trajectory Generation</h3>
+          <p>We formulate dexterous tool use as tool-centric functional goal-trajectory generation, representing manipulation through functional tool geometry and tool-environment interaction constraints.</p>
+          <p>A VLM-grounded geometric planner identifies functional tool parts and interaction targets from language, tool geometry, and RGB-D observations, then compiles them into staged SE(3) tool-pose goals for execution.</p>
+          <p class="meta">AAAI 2027 · Under Review</p>
+        </div>
+        <div class="image-shell featured-image"><img id="togo-img" class="project-image" alt="ToGo qualitative results across multiple tool-use tasks"></div>
       </article>
-      <article class="project">
-        <div class="image-shell"><img id="nlos-img" class="project-image" alt="NLOS target-domain latent alignment overview"></div>
-        <div><p class="tag">Computational Imaging · Representation Learning</p><h3>Non-Line-of-Sight Reconstruction via Target-Domain Latent Alignment</h3><p>We recast NLOS reconstruction as target-domain latent alignment, learning a compact representation from clean target images as a structural prior for reconstruction.</p><p>The method decouples target representation learning from NLOS inversion by learning the target latent space and decoder first, then aligning degraded measurements to that space with latent- and image-space objectives.</p></div>
-      </article>
-      <article class="project">
-        <div class="image-shell"><img id="pinnet-img" class="project-image" alt="PinNet qualitative segmentation results"></div>
-        <div><p class="tag">Medical Vision · Efficient Deep Learning</p><h3>PinNet: Edge-Optimized Skin Lesion Segmentation</h3><p>PinNet is an ultra-lightweight segmentation architecture for ambiguous lesion boundaries and scale variation, combining morpho-spectral feature extraction with dual-perspective attention.</p><p>The model uses approximately 0.05M parameters and 0.068 GFLOPs, targeting efficient segmentation under tight compute and memory budgets.</p><p><a href="https://doi.org/10.1016/j.eswa.2026.134354" target="_blank" rel="noreferrer">Paper / DOI</a></p></div>
-      </article>
+
+      <div class="project-grid">
+        <article class="project compact-project">
+          <div class="image-shell"><img id="nlos-img" class="project-image" alt="NLOS target-domain latent alignment overview"></div>
+          <div class="project-copy">
+            <p class="tag">Computational Imaging · Representation Learning</p>
+            <h3>Non-Line-of-Sight Reconstruction via Target-Domain Latent Alignment</h3>
+            <p>We recast NLOS reconstruction as target-domain latent alignment, learning a compact representation from clean target images as a structural prior for reconstruction.</p>
+            <p>The method decouples target representation learning from NLOS inversion by learning the target latent space and decoder first, then aligning degraded measurements to that space with latent- and image-space objectives.</p>
+          </div>
+        </article>
+
+        <article class="project compact-project">
+          <div class="image-shell"><img id="pinnet-img" class="project-image" alt="PinNet qualitative segmentation results"></div>
+          <div class="project-copy">
+            <p class="tag">Medical Vision · Efficient Deep Learning</p>
+            <h3>PinNet: Edge-Optimized Skin Lesion Segmentation</h3>
+            <p>PinNet is an ultra-lightweight segmentation architecture for ambiguous lesion boundaries and scale variation, combining morpho-spectral feature extraction with dual-perspective attention.</p>
+            <p>The model uses approximately 0.05M parameters and 0.068 GFLOPs, targeting efficient segmentation under tight compute and memory budgets.</p>
+            <p><a href="https://doi.org/10.1016/j.eswa.2026.134354" target="_blank" rel="noreferrer">Paper / DOI</a></p>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section id="publications" class="wrap section">
