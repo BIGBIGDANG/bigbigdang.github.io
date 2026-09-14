@@ -101,6 +101,18 @@ h3 { letter-spacing: -.016em; }
 .news-item time { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
 .news-item p { margin: 0; }
 
+.platform-list { border-top: 1px solid var(--line); }
+.platform-item { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.platform-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.platform-label { color: var(--muted); font-size: 12px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.platform-status { padding: 3px 8px; border-radius: 999px; font-size: 10px; font-weight: 750; letter-spacing: .04em; text-transform: uppercase; }
+.platform-status.current { color: var(--accepted); background: var(--accepted-soft); }
+.platform-status.planned { color: var(--accent); background: var(--accent-soft); }
+.platform-item h3 { margin: 8px 0 4px; font-size: 20px; }
+.platform-item p { margin: 0; color: var(--muted); font-size: 14px; }
+.platform-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 13px; }
+.platform-tags span { padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; color: #45515e; background: var(--soft); font-size: 13px; font-weight: 600; }
+
 .research-row {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
