@@ -111,8 +111,6 @@ h3 { letter-spacing: -.016em; }
 .platform-credit::after { content: " ↗"; font-size: 9px; }
 .platform-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .platform-label { color: var(--muted); font-size: 12px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
-.platform-status { padding: 3px 8px; border-radius: 999px; font-size: 10px; font-weight: 750; letter-spacing: .04em; text-transform: uppercase; }
-.platform-status.current { color: var(--accepted); background: var(--accepted-soft); }
 .platform-item h3 { margin: 10px 0 7px; font-size: 24px; }
 .platform-item p { margin: 0; color: var(--muted); font-size: 14px; }
 
