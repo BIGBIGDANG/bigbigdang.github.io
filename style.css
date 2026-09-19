@@ -116,7 +116,8 @@ h3 { letter-spacing: -.016em; }
 .robot-photo {
   position: relative;
   width: 100%;
-  aspect-ratio: 300 / 176;
+  /* A taller shared crop reveals more of the UR5 photo while keeping both cards equal-sized. */
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 11px;
   background: var(--soft);
