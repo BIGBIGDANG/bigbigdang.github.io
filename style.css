@@ -128,8 +128,8 @@ h3 { letter-spacing: -.016em; }
   object-fit: cover;
   object-position: center;
 }
-.robot-card:first-child .robot-photo img { object-position: center 46%; }
-.robot-card:nth-child(2) .robot-photo img { object-position: center 48%; }
+.robot-card:first-child .robot-photo img { object-fit: contain; object-position: center; }
+.robot-card:nth-child(2) .robot-photo img { object-fit: contain; object-position: center; }
 .robot-card-footer { padding: 9px 2px 0; text-align: left; }
 .robot-card-footer h3 {
   margin: 0;
@@ -225,7 +225,8 @@ h3 { letter-spacing: -.016em; }
   h1 { font-size: 48px; }
   .section { padding-block: 60px; }
   .compact-section, .background-section { grid-template-columns: 1fr; gap: 30px; }
-  .robot-grid { grid-template-columns: 1fr; gap: 24px; }\n  .robot-section { padding-block: 46px; }
+  .robot-grid { grid-template-columns: 1fr; gap: 24px; }
+  .robot-section { padding-block: 46px; }
   .research-row { grid-template-columns: 1fr; gap: 22px; }
   .research-media { width: 100%; height: 190px; }
   .research-body h3 { font-size: 20px; }
