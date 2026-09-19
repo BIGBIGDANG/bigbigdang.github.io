@@ -1,0 +1,39 @@
+name: Build academic CV PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - cv.tex
+      - .github/workflows/build-cv.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-pictures texlive-fonts-recommended poppler-utils
+      - name: Build and validate CV
+        run: |
+          pdflatex -interaction=nonstopmode -halt-on-error -file-line-error cv.tex
+          pdflatex -interaction=nonstopmode -halt-on-error -file-line-error cv.tex
+          test -s cv.pdf
+          pdftotext -layout cv.pdf - | grep -F 'SO-101, UR5'
+          pdftotext -layout cv.pdf - | grep -F 'ROS 2'
+      - name: Update website CV
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cv.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "Build CV PDF with UR5 and ROS 2"
+            git push
+          fi
