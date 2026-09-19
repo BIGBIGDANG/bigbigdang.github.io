@@ -102,32 +102,42 @@ h3 { letter-spacing: -.016em; }
 .news-item time { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
 .news-item p { margin: 0; }
 
-/* An image-first academic gallery: photographs retain their native framing. */
-.robot-section .section-title { margin-bottom: 30px; }
-.robot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+/* Compact supporting gallery for hands-on robot platforms. */
+.robot-section { padding-block: 54px; }
+.robot-section .section-title { margin-bottom: 22px; }
+.robot-section .section-title h2 { font-size: clamp(26px, 3vw, 34px); }
+.robot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 330px));
+  justify-content: start;
+  gap: 24px;
+}
 .robot-card { min-width: 0; margin: 0; }
 .robot-photo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  border: 1px solid #e9edf1;
-  border-radius: 10px;
-  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--soft);
 }
 .robot-photo img {
   display: block;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
 }
-.robot-card-footer { padding: 15px 0 0; text-align: center; }
-.robot-card-footer h3 { margin: 0; color: var(--ink); font-size: 18px; font-weight: 650; letter-spacing: -.01em; }
+.robot-card:first-child .robot-photo img { object-position: center 46%; }
+.robot-card:nth-child(2) .robot-photo img { object-position: center 48%; }
+.robot-card-footer { padding: 9px 2px 0; text-align: left; }
+.robot-card-footer h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -.005em;
+}
 
 .research-row {
   display: grid;
@@ -215,7 +225,7 @@ h3 { letter-spacing: -.016em; }
   h1 { font-size: 48px; }
   .section { padding-block: 60px; }
   .compact-section, .background-section { grid-template-columns: 1fr; gap: 30px; }
-  .robot-grid { grid-template-columns: 1fr; gap: 30px; }
+  .robot-grid { grid-template-columns: 1fr; gap: 24px; }\n  .robot-section { padding-block: 46px; }
   .research-row { grid-template-columns: 1fr; gap: 22px; }
   .research-media { width: 100%; height: 190px; }
   .research-body h3 { font-size: 20px; }
