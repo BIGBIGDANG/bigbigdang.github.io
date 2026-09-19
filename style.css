@@ -104,8 +104,8 @@ h3 { letter-spacing: -.016em; }
 
 .robot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
 .robot-card { min-width: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; }
-.robot-photo { display: grid; place-items: center; height: 270px; padding: 20px; background: var(--soft); }
-.robot-photo img { width: 100%; height: 100%; object-fit: contain; }
+.robot-photo { display: grid; place-items: center; height: 360px; padding: 8px; background: var(--soft); }
+.robot-photo img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
 .robot-card-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 15px; padding: 14px 18px 16px; }
 .robot-card-footer h3 { margin: 0; font-size: 20px; }
 .robot-credit { color: var(--muted); font-size: 11px; }
@@ -198,7 +198,7 @@ h3 { letter-spacing: -.016em; }
   .section { padding-block: 60px; }
   .compact-section, .background-section { grid-template-columns: 1fr; gap: 30px; }
   .robot-grid { grid-template-columns: 1fr; gap: 18px; }
-  .robot-photo { height: 240px; }
+  .robot-photo { height: 300px; }
   .research-row { grid-template-columns: 1fr; gap: 22px; }
   .research-media { width: 100%; height: 190px; }
   .research-body h3 { font-size: 20px; }
