@@ -68,6 +68,8 @@ h2 { margin-bottom: 0; font-size: clamp(30px, 4vw, 42px); letter-spacing: -.035e
 h3 { letter-spacing: -.016em; }
 .bio { max-width: 720px; margin: 0; color: var(--muted); font-size: 17px; }
 .bio strong { color: #303a47; font-weight: 650; }
+.robot-highlight { margin: 15px 0 0; color: var(--muted); font-size: 14px; }
+.robot-highlight a { color: var(--accent); font-weight: 700; }
 
 .portrait-wrap { justify-self: end; width: 210px; }
 .portrait {
